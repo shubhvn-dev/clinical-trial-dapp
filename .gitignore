@@ -1,0 +1,19 @@
+# Python / venv
+venv/
+__pycache__/
+*.pyc
+
+# Brownie build artifacts
+build/
+reports/
+
+# Environment & secrets
+.env
+
+# IDE/editor
+.vscode/
+.idea/
+venv/
+project-dapp/venv/
+web/.next/
+web/node_modules/
