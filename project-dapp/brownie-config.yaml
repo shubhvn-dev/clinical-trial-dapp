@@ -1,0 +1,13 @@
+project_structure:
+  build: build
+  contracts: contracts
+  interfaces: interfaces
+  reports: reports
+  scripts: scripts
+  tests: tests
+
+networks:
+  sepolia:
+    host: ${SEPOLIA_RPC_URL}
+    chainid: 11155111
+    explorer: https://api-sepolia.etherscan.io/api
