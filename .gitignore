@@ -21,3 +21,5 @@ venv/
 project-dapp/venv/
 web/.next/
 web/node_modules/
+venv/
+project-dapp/venv/
