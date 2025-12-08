@@ -32,6 +32,26 @@ class MatchRequest(BaseModel):
 def health():
     return {"status": "ok"}
 
+@app.get("/trials")
+def list_trials():
+    trials = []
+    # Demo: look for trials with ids 0..3
+    for trial_id in range(4):
+        t = get_trial(trial_id)
+        # t[1] is name; skip empty slots
+        if t[1]:
+            trials.append(
+                {
+                    "id": t[0],
+                    "name": t[1],
+                    "description": t[2],
+                    "sponsor": t[3],
+                    "totalBudgetWei": str(t[4]),
+                    "active": t[5],
+                }
+            )
+    return trials
+
 
 @app.get("/trials/{trial_id}")
 def read_trial(trial_id: int):
